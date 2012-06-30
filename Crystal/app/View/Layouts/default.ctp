@@ -4,7 +4,9 @@
 /**
 	Resolves a content url to the baspath
 */
-
+function less(){
+	
+}
 ?>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -28,11 +30,10 @@
 		<?php
 		endforeach;
 	}
-	
-	$this->Html->less('main');
-	
-	
-	$this->Html->less("font-awesome.less");
+	?>
+	<link rel="stylesheet/less" type="text/css" href="<?=($this->Html->url('/', true))?>css/main.less">	
+	<link rel="stylesheet/less" type="text/css" href="<?=($this->Html->url('/', true))?>css/font-awesome.less">
+	<link rel="stylesheet/less" type="text/css" href="<?=($this->Html->url('/', true))?>css/colors.less">
 	
 	?>
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
