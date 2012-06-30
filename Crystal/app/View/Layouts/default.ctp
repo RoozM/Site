@@ -54,7 +54,7 @@ function less(){
 			foreach($items as $key=>$item):
 				$active = ($item == $current_page) ? "menu_".strtolower($item)."_a" : null;
 		?>
-			<div id="menu_<?=strtolower($item);?>" colorto="<?=$colors[$key]?>" item="<?=$item?>" class="menu_item <?=$active?>" onclick="window.location='<?=strtolower($item)?>';">
+			<div id="menu_<?=strtolower($item);?>" colorto="<?=$colors[$key]?>" item="<?=$item?>" class="menu_item <?=$active?>" onclick="window.location='<?=(($this->Html->url('/', true))).strtolower($item)?>';">
 				<div class="menu_item_icon">
 					<i class="icon-<?=$icons[$key]?>"></i>
 				</div>
