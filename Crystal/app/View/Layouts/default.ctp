@@ -1,4 +1,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<?
+/**
+	Resolves a content url to the baspath
+*/
+
+?>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<script type="text/javascript">
@@ -21,9 +28,13 @@
 		<?php
 		endforeach;
 	}
+	
+	$this->Html->less('main');
+	
+	
+	$this->Html->less("font-awesome.less");
+	
 	?>
-	<link rel="stylesheet/less" type="text/css" href="css/main.less">
-	<link rel="stylesheet/less" type="text/css" href="css/font-awesome.less">
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 	<?php
 		print $this->fetch('meta');
