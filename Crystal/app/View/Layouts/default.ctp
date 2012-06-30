@@ -26,7 +26,7 @@ function less(){
 	if(!empty($lesscss)){
 		foreach($lesscss as $less):
 		?>
-			<link rel="stylesheet/less" type="text/css" href="css/<?=$less?>.less">
+			<link rel="stylesheet/less" type="text/css" href="<?=($this->Html->url('/', true))?>css/<?=$less?>.less">
 		<?php
 		endforeach;
 	}

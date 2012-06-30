@@ -12,7 +12,7 @@
 		*/
 		public function add(){
 		    $this->_sc();
-		   
+		    
 		}
 	
 	}
