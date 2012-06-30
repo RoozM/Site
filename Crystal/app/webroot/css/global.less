@@ -1,0 +1,137 @@
+/**
+	Snag Some Fonts and Colors
+*/
+
+@import url(http://fonts.googleapis.com/css?family=Lobster);
+@import url('colors.less');
+
+/**
+	Dimensions
+*/
+
+@bodywidth : 960px;
+@menu_width: 160px;
+
+/**
+	Classes
+*/
+
+.opacity(@t){
+	opacity: @t;
+}
+
+.padding_vertical(@p){
+	padding-bottom: @p;
+	padding-top: @p; 
+}
+
+/**
+	Main Body
+*/
+body{
+	background-color: #191919;
+}
+
+.center{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#container{
+	width: @bodywidth;
+	height: auto;
+	.center;
+	margin-top: -8px;
+	color: white;
+}
+
+#content{
+	width: (@bodywidth)+4;
+	height: 1000px;
+	position: absolute;
+	.center;
+	margin-left: -4px;
+	background-color: lighten(black, 5%);
+}
+
+#header{
+	width: 100%;
+	height: 100px;
+	background-color: black;
+}
+
+#menu_home{
+	width: @menu_width * 2;
+	height: 100px;
+	background-image: url(../img/logo_small.png);
+	background-color: black;
+}
+
+#menu_blog_icon{
+	background-image: url('../img/blog.png');
+}
+
+#menu_apps_icon{
+	background-image: url('../img/apple_logo.png');
+}
+
+#menu_title_bars{
+	position: absolute;
+	width: @bodywidth;
+	color: black;
+	height: auto;
+}
+
+@icon_width : 30px;
+@icon_height: 30px;
+@menu_item_height: 100px;
+
+.menu_item_icon{
+	width: @menu_width;
+	height: auto;
+	text-align: center;
+	position: absolute;
+	.center;
+	margin-top: (@menu_item_height/2-@icon_height/2);
+	font-size: inherit;
+}
+
+i{
+	font-size: inherit;
+}
+
+.menu_item{
+	width:  @menu_width;
+	height: @menu_item_height;
+	display: inline-block;
+	margin-left: -4px;
+	cursor: pointer;
+	background-color: black;
+	font-size: 30px;
+}
+
+.menu_title_bar{
+	display: inline-block;
+	width: @menu_width;
+	.padding_vertical(12px);
+	text-align: center;
+	color: white;
+	//Align Properly
+	margin-left: -4px;
+	margin-top: -4px;
+	font-family: "Lobster";
+	.opacity( .7);
+	color: white;
+	font-size:18px;
+	background-color: black;
+	position: relative;
+	bottom: 0px;
+}
+
+/**
+	Exception for Logo Bar - 2x width
+*/
+
+#menu_title_home{
+	width: @menu_width * 2;
+}
